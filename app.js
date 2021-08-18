@@ -16,7 +16,7 @@ function productDetailsUpdate(event) {
     } else if (event.target.classList[0] == 'quantity-minus'
         && previousQuantity > 0) {
         newQuantity = previousQuantity - 1;
-    }
+    } else { return }
     quantityContainer.value = newQuantity;
     priceContainer.innerText = newQuantity * productPrice;
     updateTotal();
